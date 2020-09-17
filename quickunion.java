@@ -3,7 +3,7 @@ package algorithms;
 public class quickunion {
 
 	private int[] id;
-	public quickfind(int N) 
+	public quickunion(int N) 
 	{
 		id=new int[N];
 		for(int i=0;i<N;i++)
@@ -16,7 +16,7 @@ public class quickunion {
 	}
 	public boolean connected(int p, int q)
 	{
-		return root[p]==root[q];
+		return root(p)==root(q);
 	}
 	public void union(int p,int q)
 	{
@@ -27,7 +27,7 @@ public class quickunion {
 
 	public static void main(String[] args)
 	{
-		quickfind qf=new quickfind(10);
+		quickunion qf=new quickunion(10);
 		qf.union(4,3);
 		qf.union(3,8);
 		qf.union(6,5);
@@ -40,4 +40,5 @@ public class quickunion {
 		qf.union(2, 7);
 		System.out.println(qf.connected(0,7));
 	}
+	
 }
