@@ -18,24 +18,23 @@ public class Practise {
 		System.out.println("Overweight over= "+over);
 	}
 	
+	public void printer() {
+		System.out.println(weight+" "+ height);
+	}
+	
 
 	public static void main(String[] args) throws IOException 
 	{
-		System.exit(1);
 		BufferedReader stdin=new BufferedReader(new InputStreamReader(System.in));
 		System.out.println("Enter your weight(kg) and height(m)");
-//		int x=Integer.parseInt(stdin.readLine());
-//		double y=Double.parseDouble(stdin.readLine());
-//		Practise obj1=new Practise(x,y);
-//		System.out.println("BMI is = " +obj1.BMI());
-		Practise.scale();
-		StringBuffer sb=new StringBuffer("Hello");
-		sb.append("! Mohit");
-		System.out.println(sb);
-		System.out.println(Practise.over);
+		int x=Integer.parseInt(stdin.readLine());
+		double y=Double.parseDouble(stdin.readLine());
+		Practise obj1=new Practise(x,y);
+		int x_x=Integer.parseInt(stdin.readLine());
+		double y_y=Double.parseDouble(stdin.readLine());
+		Practise obj2=new Practise(x_x,y_y);
+		System.out.println("BMI is = " +obj1.BMI());
+		obj1.printer();
+		obj2.printer();
 	}
 }
-
-public class STUDENT{
-}
-
