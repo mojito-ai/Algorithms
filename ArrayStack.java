@@ -17,6 +17,7 @@ public class ArrayStack <Item> implements Iterable<Item>{
 	public boolean isEmpty()
 	{	return N==0; }
 	
+	//Double the array when full
 	public void push(Item item)
 	{	
 		if(N==arr.length)
@@ -24,6 +25,7 @@ public class ArrayStack <Item> implements Iterable<Item>{
 		arr[N++]=item;	
 	}
 	
+	//Half the array when 75% empty
 	public Item pop()
 	{	
 		Item item = (Item) arr[--N]; 
@@ -57,11 +59,6 @@ public class ArrayStack <Item> implements Iterable<Item>{
 		s.push("2");
 		s.push("3");
 		s.push("2");
-		s.push("2");
-		s.push("3");
-		s.push("2");
-		s.push("2");
-		s.push("3");
 		s.push("2");
 		System.out.println(s.pop());
 		System.out.println(s.pop());

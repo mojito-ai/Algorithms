@@ -26,7 +26,7 @@ public class StackofStrings <Item> implements Iterable<Item> {
 		return tmp;
 	}
 	
-	protected Iterator <Item> iterator() {return new ListIterator();}
+	public Iterator <Item> iterator() {return new ListIterator();}
 	
 	private class ListIterator implements Iterator<Item>
 	{
